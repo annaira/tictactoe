@@ -14,11 +14,11 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            squares : Array(9).fill(null),
+            squares: Array(9).fill(null),
         };
     }
 
-    handleClick(i){
+    handleClick(i) {
         const squares = this.state.squares.slice();
         squares[i] = 'X';
         this.setState({squares: squares});
@@ -64,7 +64,7 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board />
+                    <Board/>
                 </div>
                 <div className="game-info">
                     <div>{/* status */}</div>
@@ -78,6 +78,6 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-    <Game />,
+    <Game/>,
     document.getElementById('root')
 );
